@@ -51,13 +51,20 @@ export default {
     };
   },
   methods: {
-    async createBlog(){
-        const res = await axios.post("posts", {
-            title: this.title,
-            body: this.body,
+    async createBlog() {
+      await axios
+        .post("posts", {
+          title: this.title,
+          body: this.body,
+        })
+        .then((res) => {
+          console.log(res);
+          this.$router.push("/blogs");
+        })
+        .catch((err) => {
+          console.log(err);
         });
-        this.$router.push("/blogs");
-    }
+    },
   },
 };
 </script>

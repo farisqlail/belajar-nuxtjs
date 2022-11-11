@@ -24,6 +24,7 @@
                 >Read More</nuxt-link
               >
               <nuxt-link :to="{ name: 'blogs-edit-id', params: { id: post.id } }" class="btn btn-success ml-2">Edit</nuxt-link>	
+              <nuxt-link :to="{ name: 'blogs-delete-id', params: { id: post.id } }" class="btn btn-danger ml-2">Delete</nuxt-link>
             </div>
           </div>
         </div>
