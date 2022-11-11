@@ -8,7 +8,7 @@
           <h1>Blogs</h1>
         </div>
         <div class="col-md-4" align="right">
-          <nuxt-link to="/blogs/create" class="btn btn-primary mt-3">Create Blog</nuxt-link>
+          <nuxt-link to="/blogs/create/" class="btn btn-primary mt-3">Create Blog</nuxt-link>
         </div>
       </div>
 
@@ -23,6 +23,7 @@
                 class="btn btn-primary"
                 >Read More</nuxt-link
               >
+              <nuxt-link :to="{ name: 'blogs-edit-id', params: { id: post.id } }" class="btn btn-success ml-2">Edit</nuxt-link>	
             </div>
           </div>
         </div>
