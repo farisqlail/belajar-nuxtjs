@@ -3,19 +3,20 @@
     <layouts />
     <div class="container">
       <h1 align="center">Home</h1>
-      <div v-for="post in posts.slice(0, 5)" :key="post.id">
-        <div class="row mt-2">
-          <div class="col-md-6">
-            <div class="card mb-3">
-              <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
-                <p class="card-text">{{ post.body }}</p>
-                <nuxt-link :to="{name: 'blogs-show', params: {show: post.id}}" class="btn btn-primary">Read More</nuxt-link>
-              </div>
+      <div class="row mt-2">
+        <div class="col-md-6" v-for="post in posts.slice(0, 4)" :key="post.id">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.body }}</p>
+              <nuxt-link
+                :to="{ name: 'blogs-show', params: { show: post.id } }"
+                class="btn btn-primary"
+                >Read More</nuxt-link
+              >
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   </div>
