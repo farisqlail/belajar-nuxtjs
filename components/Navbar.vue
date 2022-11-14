@@ -49,7 +49,7 @@
           <div class="navbar-nav">
             <nuxt-link class="nav-link active" aria-current="page" to="/">Home</nuxt-link>
             <nuxt-link class="nav-link" to="/blogs">Blog</nuxt-link>
-            <a class="nav-link" href="#">Pricing</a>
+            <nuxt-link class="nav-link" to="career">Career</nuxt-link>
             <a class="nav-link disabled">Disabled</a>
           </div>
         </div>
